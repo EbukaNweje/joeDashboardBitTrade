@@ -63,8 +63,8 @@ const DashHome = ({
     const [others, setOthers] = useState();
     const [alluserplan, setAlluserplan] = useState();
 
-    const url3 = `https://keec-new-site-back-end.vercel.app/api/getalltransactions/${id}`
-    const url4 = `https://keec-new-site-back-end.vercel.app/api/getallinvestmentplan/${id}`
+    const url3 = `https://joe-backend-bit-trade.vercel.app/api/getalltransactions/${id}`
+    const url4 = `https://joe-backend-bit-trade.vercel.app/api/getallinvestmentplan/${id}`
 
     const getAllOthers = ()=>{
         axios.get(url3)
@@ -361,7 +361,7 @@ useEffect(()=>{
                         <div className="DashHomeMainContenReferUsDivBox">
                             <input
                                 type="text"
-                                value={`https://tradebitpay.vercel.app/`}
+                                value={`https://thebitpaytrade.vercel.app/`}
                                 readOnly
                             />
                             <div className="DashHomeMainContenReferUsDivBoxCopy">

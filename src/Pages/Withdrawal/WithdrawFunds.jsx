@@ -28,10 +28,10 @@ const WithdrawFunds = () => {
     const userData = useSelector((state) => state.persisitedReducer.user)
     console.log(userData);
 
-    const url = `https://keecnewsitebackend-1.onrender.com/api/requestwithdrawcode/${id}`
-    const urlll = `https://keecnewsitebackend-1.onrender.com/api/withdraw/${id}`
-    const urlprofit = `https://keecnewsitebackend-1.onrender.com/api/transferprofittoaccount/${id}`
-    const urlemail = `https://keecnewsitebackend-1.onrender.com/api/withdrawalemailsend/${id}`
+    const url = `https://joebackendbittrade.onrender.com/api/requestwithdrawcode/${id}`
+    const urlll = `https://joebackendbittrade.onrender.com/api/withdraw/${id}`
+    const urlprofit = `https://joebackendbittrade.onrender.com/api/transferprofittoaccount/${id}`
+    const urlemail = `https://joebackendbittrade.onrender.com/api/withdrawalemailsend/${id}`
 
     let userName = userData?.userName
     let email = userData?.email

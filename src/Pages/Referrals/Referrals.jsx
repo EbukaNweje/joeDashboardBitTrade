@@ -17,7 +17,7 @@ const Referrals = () => {
                             <div className="ReferralContentTopReferUsDivBox">
                                 <input
                                     type="text"
-                                    value={"https://tradebitpay.vercel.app/"}
+                                    value={"https://thebitpaytrade.vercel.app/"}
                                     readOnly
                                 />
                                 <div className="ReferralContentTopReferUsDivBoxCopy">

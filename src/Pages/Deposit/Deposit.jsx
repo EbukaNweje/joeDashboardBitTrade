@@ -4,12 +4,17 @@ import { useState } from "react";
 
 const Deposit = () => {
     const nav = useNavigate();
-    const [bitcoin, setBitcoin] = useState(false)
     const [amount, setAmount] = useState("0.00")
     const [amountError, setAmountError] = useState("")
+    const [bitcoin, setBitcoin] = useState(false)
     const [eth, setEth] = useState(false)
     const [doge, setDoge] = useState(false)
     const [bnb, setbnb] = useState(false)
+    const [solana, setSolana] = useState(false)
+    const [bNBBSC , setBNBBSC ] = useState(false)
+    const [xRP, setXRP] = useState(false)
+    const [litecoin, setLitecoin] = useState(false)
+    const [usdt, setUSDT] = useState(false)
     const [isButtonDisabled, setButtonDisabled] = useState(true);
 
     const handleAmount = (e) => {
@@ -29,25 +34,117 @@ const Deposit = () => {
     }else{
         localStorage.setItem('amount', JSON.stringify(amount));
         if(bitcoin === true){
-            setDoge(false)
+            // setBitcoin(true)
             setEth(false)
+            setDoge(false)
             setbnb(false)
+            setSolana(false)
+            setBNBBSC(false)
+            setXRP(false)
+            setLitecoin(false)
+            setUSDT(false)
             nav(`payment/BTC`)
         } else if(eth === true) {
-            setDoge(false)
             setBitcoin(false)
+            // setEth(true)
+            setDoge(false)
             setbnb(false)
+            setSolana(false)
+            setBNBBSC(false)
+            setXRP(false)
+            setLitecoin(false)
+            setUSDT(false)
+          
             nav(`payment/ETH`)
         } else if(doge === true) {
-            setEth(false)
             setBitcoin(false)
+            setEth(false)
+            // setDoge(true)
             setbnb(false)
-            nav(`payment/USDT`)
+            setSolana(false)
+            setBNBBSC(false)
+            setXRP(false)
+            setLitecoin(false)
+            setUSDT(false)
+          
+            nav(`payment/DODGECOIN`)
         } else if(bnb === true) {
-            setDoge(false)
             setBitcoin(false)
             setEth(false)
+            setDoge(false)
+            // setbnb(true)
+            setSolana(false)
+            setBNBBSC(false)
+            setXRP(false)
+            setLitecoin(false)
+            setUSDT(false)
+           
             nav(`payment/BNB`)
+        }  
+        else if(solana === true) {
+            setBitcoin(false)
+            setEth(false)
+            setDoge(false)
+            setbnb(false)
+            // setSolana(true)
+            setBNBBSC(false)
+            setXRP(false)
+            setLitecoin(false)
+            setUSDT(false)
+          
+            nav(`payment/SOLANA`)
+        }  
+        else if(bNBBSC === true) {
+            setBitcoin(false)
+            setEth(false)
+            setDoge(false)
+            setbnb(false)
+            setSolana(false)
+            // setBNBBSC(true)
+            setXRP(false)
+            setLitecoin(false)
+            setUSDT(false)
+            
+            nav(`payment/BNBBSC`)
+        }  
+        else if(xRP === true) {
+            setBitcoin(false)
+            setEth(false)
+            setDoge(false)
+            setbnb(false)
+            setSolana(false)
+            setBNBBSC(false)
+            // setXRP(true)
+            setLitecoin(false)
+            setUSDT(false)
+            
+            nav(`payment/XRP`)
+        }  
+        else if(litecoin === true) {
+            setBitcoin(false)
+            setEth(false)
+            setDoge(false)
+            setbnb(false)
+            setSolana(false)
+            setBNBBSC(false)
+            setXRP(false)
+            // setLitecoin(true)
+            setUSDT(false)
+        
+            nav(`payment/LITECOIN`)
+        }  
+        else if(usdt === true) {
+            setBitcoin(false)
+            setEth(false)
+            setDoge(false)
+            setbnb(false)
+            setSolana(false)
+            setBNBBSC(false)
+            setXRP(false)
+            setLitecoin(false)
+            // setUSDT(true)
+
+            nav(`payment/USDT`)
         }  
     }
    
@@ -70,46 +167,151 @@ const Deposit = () => {
                                 <span>BITCOIN PAYMENT</span>
                                 <input type="radio"  name="b"
                                     onChange={()=>{
-                                        setBitcoin(true),
-                                        setDoge(false),
-                                        setEth(false),
+                                        setBitcoin(true)
+                                        setEth(false)
+                                        setDoge(false)
                                         setbnb(false)
+                                        setSolana(false)
+                                        setBNBBSC(false)
+                                        setXRP(false)
+                                        setLitecoin(false)
+                                        setUSDT(false)
                                         setButtonDisabled(false)
                                     }}
                                 />
                             </div>
                             <div className="DepositContentLeftDownInput">
-                                <span>ETHEREUM PAYMENT</span>
+                                <span>USDT ETHEREUM (Erc 20) PAYMENT</span>
                                 <input type="radio"  name="b"
                                     onChange={()=>{
-                                        setBitcoin(false),
-                                        setDoge(false),
-                                        setEth(true),
+                                        setBitcoin(false)
+                                        setEth(true)
+                                        setDoge(false)
                                         setbnb(false)
+                                        setSolana(false)
+                                        setBNBBSC(false)
+                                        setXRP(false)
+                                        setLitecoin(false)
+                                        setUSDT(false)
                                         setButtonDisabled(false)
                                     }}
                                 />
                             </div>
                             <div className="DepositContentLeftDownInput">
-                                <span>USDT PAYMENT</span>
+                                <span>DODGECOIN PAYMENT</span>
                                 <input type="radio"  name="b"
                                     onChange={()=>{
-                                        setBitcoin(false),
-                                        setDoge(true),
-                                        setEth(false),
+                                        setBitcoin(false)
+                                        setEth(false)
+                                        setDoge(true)
                                         setbnb(false)
+                                        setSolana(false)
+                                        setBNBBSC(false)
+                                        setXRP(false)
+                                        setLitecoin(false)
+                                        setUSDT(false)
                                         setButtonDisabled(false)
                                     }}
                                 />
                             </div>
                             <div className="DepositContentLeftDownInput">
-                                <span>BNB PAYMENT</span>
+                                <span>BNB (Binance Beacon chain) PAYMENT</span>
                                 <input type="radio"  name="b"
                                     onChange={()=>{
-                                        setBitcoin(false),
-                                        setDoge(false),
-                                        setEth(false),
+                                        setBitcoin(false)
+                                        setEth(false)
+                                        setDoge(false)
                                         setbnb(true)
+                                        setSolana(false)
+                                        setBNBBSC(false)
+                                        setXRP(false)
+                                        setLitecoin(false)
+                                        setUSDT(false)
+                                        setButtonDisabled(false)
+                                    }}
+                                />
+                            </div>
+                            <div className="DepositContentLeftDownInput">
+                                <span>BNB BSC (smart chain) PAYMENT</span>
+                                <input type="radio"  name="b"
+                                    onChange={()=>{
+                                        setBitcoin(false)
+                                        setEth(false)
+                                        setDoge(false)
+                                        setbnb(false)
+                                        setSolana(false)
+                                        setBNBBSC(true)
+                                        setXRP(false)
+                                        setLitecoin(false)
+                                        setUSDT(false)
+                                        setButtonDisabled(false)
+                                    }}
+                                />
+                            </div>
+                            <div className="DepositContentLeftDownInput">
+                                <span>SOLANA PAYMENT</span>
+                                <input type="radio"  name="b"
+                                    onChange={()=>{
+                                        setBitcoin(false)
+                                        setEth(false)
+                                        setDoge(false)
+                                        setbnb(false)
+                                        setSolana(true)
+                                        setBNBBSC(false)
+                                        setXRP(false)
+                                        setLitecoin(false)
+                                        setUSDT(false)
+                                        setButtonDisabled(false)
+                                    }}
+                                />
+                            </div>
+                            <div className="DepositContentLeftDownInput">
+                                <span>USDT Tron (trc 20) PAYMENT</span>
+                                <input type="radio"  name="b"
+                                    onChange={()=>{
+                                        setBitcoin(false)
+                                        setEth(false)
+                                        setDoge(false)
+                                        setbnb(false)
+                                        setSolana(false)
+                                        setBNBBSC(false)
+                                        setXRP(false)
+                                        setLitecoin(false)
+                                        setUSDT(true)
+                                        setButtonDisabled(false)
+                                    }}
+                                />
+                            </div>
+                            <div className="DepositContentLeftDownInput">
+                                <span>XRP (ripple) PAYMENT</span>
+                                <input type="radio"  name="b"
+                                    onChange={()=>{
+                                        setBitcoin(false)
+                                        setEth(false)
+                                        setDoge(false)
+                                        setbnb(false)
+                                        setSolana(false)
+                                        setBNBBSC(false)
+                                        setXRP(true)
+                                        setLitecoin(false)
+                                        setUSDT(false)
+                                        setButtonDisabled(false)
+                                    }}
+                                />
+                            </div>
+                            <div className="DepositContentLeftDownInput">
+                                <span>LITECOIN PAYMENT</span>
+                                <input type="radio"  name="b"
+                                    onChange={()=>{
+                                        setBitcoin(false)
+                                        setEth(false)
+                                        setDoge(false)
+                                        setbnb(false)
+                                        setSolana(false)
+                                        setBNBBSC(false)
+                                        setXRP(false)
+                                        setLitecoin(true)
+                                        setUSDT(false)
                                         setButtonDisabled(false)
                                     }}
                                 />

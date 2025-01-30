@@ -34,8 +34,8 @@ const Payment = () => {
         copied: false,
       });
 
-      const url = `https://keecnewsitebackend-1.onrender.com/api/sendpayment/${id}`
-      const url2 = `https://joe-backend-bit-trade.vercel.app/api/deposit/${id}`
+      const url = `https://joebackendbittrade.onrender.com/api/sendpayment/${id}`
+      const url2 = `https://joe-backend-bit-trade-lime.vercel.app/api/deposit/${id}`
 
       const data = {
         amount:amount

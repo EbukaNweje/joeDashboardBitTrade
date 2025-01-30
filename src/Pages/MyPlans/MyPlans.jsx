@@ -54,7 +54,7 @@ const MyPlans = ({myplans, homechange, handleShowDetailPlan}) => {
 
     const {id} = useParams()
     const [alluserplan, setAlluserplan] = useState();
-    const url4 = `https://joe-backend-bit-trade.vercel.app/api/getalluserplan/${id}`
+    const url4 = `https://joe-backend-bit-trade-lime.vercel.app/api/getalluserplan/${id}`
 
     const getalluserplan = ()=>{
         axios.get(url4)

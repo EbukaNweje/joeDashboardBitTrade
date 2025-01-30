@@ -37,9 +37,9 @@ const Transactions = () => {
         setTransOthers(true);
     };
 
-    const url = `https://joe-backend-bit-trade.vercel.app/api/getalldeposit/${id}`
-    const url2 = `https://joe-backend-bit-trade.vercel.app/api/getallwithdrawal/${id}`
-    const url3 = `https://joe-backend-bit-trade.vercel.app/api/getalltransactions/${id}`
+    const url = `https://joe-backend-bit-trade-lime.vercel.app/api/getalldeposit/${id}`
+    const url2 = `https://joe-backend-bit-trade-lime.vercel.app/api/getallwithdrawal/${id}`
+    const url3 = `https://joe-backend-bit-trade-lime.vercel.app/api/getalltransactions/${id}`
 
     const getAllDeposit = ()=>{
            axios.get(url)

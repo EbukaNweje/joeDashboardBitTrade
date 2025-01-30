@@ -63,8 +63,8 @@ const DashHome = ({
     const [others, setOthers] = useState();
     const [alluserplan, setAlluserplan] = useState();
 
-    const url3 = `https://joe-backend-bit-trade.vercel.app/api/getalltransactions/${id}`
-    const url4 = `https://joe-backend-bit-trade.vercel.app/api/getallinvestmentplan/${id}`
+    const url3 = `https://joe-backend-bit-trade-lime.vercel.app/api/getalltransactions/${id}`
+    const url4 = `https://joe-backend-bit-trade-lime.vercel.app/api/getallinvestmentplan/${id}`
 
     const getAllOthers = ()=>{
         axios.get(url3)
